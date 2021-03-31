@@ -1,0 +1,120 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Launcher</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">fr.esiea.ex4A</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Launcher (fr.esiea.ex4A)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Launcher</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (4/ 5)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Launcher$$EnhancerBySpringCGLIB$$9e578f97</td>
+  </tr>
+  <tr>
+    <td class="name">Launcher$$EnhancerBySpringCGLIB$$9e578f97$$FastClassBySpringCGLIB$$176e909e</td>
+  </tr>
+  <tr>
+    <td class="name">Launcher$$FastClassBySpringCGLIB$$4ac7f0f5</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (3/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    80%
+  </span>
+  <span class="absValue">
+    (4/ 5)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package fr.esiea.ex4A;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import fr.esiea.ex4A.pickup.AgifyClient;
+<i>4</i>&nbsp;import org.springframework.boot.SpringApplication;
+<i>5</i>&nbsp;import org.springframework.boot.autoconfigure.SpringBootApplication;
+<i>6</i>&nbsp;import org.springframework.context.annotation.Bean;
+<i>7</i>&nbsp;import retrofit2.Retrofit;
+<i>8</i>&nbsp;import retrofit2.converter.jackson.JacksonConverterFactory;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;@SpringBootApplication
+<b class="fc"><i>11</i>&nbsp;public class Launcher {</b>
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    public static void main(String[] args) {
+<b class="fc"><i>14</i>&nbsp;        SpringApplication.run(Launcher.class, args);</b>
+<b class="nc"><i>15</i>&nbsp;    }</b>
+<i>16</i>&nbsp;    @Bean
+<i>17</i>&nbsp;    AgifyClient agifyClient() {
+<b class="fc"><i>18</i>&nbsp;        Retrofit retrofit = new Retrofit.Builder().baseUrl(&quot;https://api.agify.io/&quot;).addConverterFactory(JacksonConverterFactory.create()).build();</b>
+<b class="fc"><i>19</i>&nbsp;        return retrofit.create(AgifyClient.class);</b>
+<i>20</i>&nbsp;    }
+<i>21</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-03-31 22:35</div>
+</div>
+</body>
+</html>
